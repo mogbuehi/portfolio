@@ -13,8 +13,7 @@ from assistant import ai_assistant
 st.header("Chat")
 # Load API key from environment variable
 if 'api_key' not in st.session_state:
-    load_dotenv(find_dotenv())
-    st.session_state.api_key = os.getenv('OPENAI_API_KEY')
+    api_key = st.secrets["OPENAI_API_KEY"]
 
 client = OpenAI(api_key=st.session_state.api_key)
 
