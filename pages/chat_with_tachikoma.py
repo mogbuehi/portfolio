@@ -5,7 +5,6 @@ from PIL import Image
 from streamlit_lottie import st_lottie
 import requests
 import base64
-from dotenv import load_dotenv, find_dotenv
 import os
 from openai import OpenAI
 from assistant import ai_assistant
