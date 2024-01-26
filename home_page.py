@@ -5,7 +5,6 @@ from PIL import Image
 
 import requests
 import base64
-from dotenv import load_dotenv, find_dotenv
 import os
 from openai import OpenAI
 from assistant import ai_assistant
