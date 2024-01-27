@@ -2,7 +2,6 @@ import streamlit as st
 from pathlib import Path
 import streamlit as st
 from PIL import Image
-from streamlit_lottie import st_lottie
 import requests
 import base64
 import os
