@@ -49,7 +49,6 @@ st.markdown('<div class="sticky-header">Matthew Ogbuehi | AI Engineer </div>', u
 with open (resume_file, "rb") as pdf_file:
     PDFbyte = pdf_file.read()
 
-    profile_pic = Image.open(profile_pic)
 with st.sidebar:
     st.download_button(
         label=""" 🗎 Download Resume""",
