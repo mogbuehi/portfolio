@@ -8,7 +8,6 @@ import datetime
 
 def wait_on_run(run, thread_id):
   # Initiate client
-  load_dotenv(find_dotenv()) 
   api_key = os.getenv('OPENAI_API_KEY')
   client = OpenAI(api_key=api_key)
 
@@ -25,7 +24,6 @@ def wait_on_run(run, thread_id):
 
 def get_response(thread_id):
   # Initiate client
-  load_dotenv(find_dotenv()) 
   api_key = os.getenv('OPENAI_API_KEY')
   client = OpenAI(api_key=api_key)
 
