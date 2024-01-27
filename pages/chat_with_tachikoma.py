@@ -5,13 +5,26 @@ from PIL import Image
 import requests
 import base64
 import os
+from dotenv import load_dotenv
 from openai import OpenAI
 from assistant import ai_assistant
 
 st.header("Chat")
 # Load API key from environment variable
+# Check if the API key is not already in the session state
 if 'api_key' not in st.session_state:
-    st.session_state['api_key'] = st.secrets["OPENAI_API_KEY"]
+    load_dotenv()
+    # Load the API key from the environment variables
+    st.session_state['api_key'] = os.getenv('OPENAI_API_KEY')
+
+# Use the API key from the session state
+api_key = st.session_state['api_key']
+
+# Optional: Check if the API key is loaded and display a message
+if api_key is None:
+    st.error("API key is not set!")
+else:
+    st.success("API key loaded successfully.")
 
 client = OpenAI(api_key=st.session_state.api_key)
 
