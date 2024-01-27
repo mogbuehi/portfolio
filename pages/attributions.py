@@ -30,6 +30,18 @@ social_media_icons = {
     
 }
 
+# Corresponding URLs for your social media
+social_media_urls = {
+    'YouTube': "https://www.youtube.com/channel/UC-MU1n71xrDjdqNFwXv5CuQ",
+    'LinkedIn': "https://www.linkedin.com/in/mogbuehi/",
+    'GitHub': "https://github.com/mogbuehi",
+    'HuggingFace': "https://huggingface.co/mogbuehi",
+    'Instagram': "https://www.instagram.com",
+    "X": "https://twitter.com/Matten_Zero",
+    'GMail': "matt.ogbuehi@gmail.com"
+}
+
+
 
 # --- Layout of the Page
 # Add custom CSS for the sticky header and sticky footer
