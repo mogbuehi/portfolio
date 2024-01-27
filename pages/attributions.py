@@ -1,5 +1,7 @@
-import streamlit as st
 from pathlib import Path
+import streamlit as st
+from PIL import Image
+import base64
 
 # --- PATH Settings ---
 project_root = Path(__file__).parent.parent
