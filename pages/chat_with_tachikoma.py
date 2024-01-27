@@ -13,7 +13,7 @@ st.header("Chat")
 if 'api_key' not in st.session_state:
     api_key = st.secrets["OPENAI_API_KEY"]
 
-    client = OpenAI(api_key=st.session_state.api_key)
+client = OpenAI(api_key=st.session_state.api_key)
 
 # Initialize session state for messages and thread_id if not already present
 if "messages" not in st.session_state:
