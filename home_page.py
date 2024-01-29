@@ -64,7 +64,7 @@ social_media_urls = {
     'HuggingFace': "https://huggingface.co/mogbuehi",
     'Instagram': "https://www.instagram.com",
     "X": "https://twitter.com/Matten_Zero",
-    'GMail': "matt.ogbuehi@gmail.com"
+    'GMail': "mailto:matt.ogbuehi@gmail.com"
 }
 
 # Client logos
