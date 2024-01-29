@@ -8,6 +8,10 @@ import os
 from openai import OpenAI
 from assistant import ai_assistant
 
+css_file = "../styles/main.css"
+with open(css_file) as f:
+    st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
+
 st.header("Chat with Tachikoma")
 st.markdown("""Chat with my virtual assistant, Tachikoma. Her personality is based on the AI from the anime Ghost in the Shell. 
 She is has knowledge of my work experience and can answer questions about my resume with you. Enter your queries below!""")
