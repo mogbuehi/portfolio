@@ -69,9 +69,8 @@ social_media_urls = {
 
 # Client logos
 client_logos = {
-    'zengx' : zengx,
-    'statascratch' : statascratch
-    
+    'statascratch' : statascratch,
+    'zengx' : zengx
 }
 
 
