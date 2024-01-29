@@ -18,6 +18,11 @@ hf_icon = project_root/ "assets"/ "hf.png"
 gmail_icon = project_root/ "assets"/ "gmail.png"
 x_icon = project_root/ "assets"/ "x.png"
 
+# Function to convert file to Base64 
+def get_image_as_base64(path):
+    with open(path, "rb") as image_file:
+        return base64.b64encode(image_file.read()).decode()
+
 # Define your social media icons and paths. This is also the order they appear in the footer
 social_media_icons = {
     'YouTube': youtube_icon,
@@ -40,7 +45,6 @@ social_media_urls = {
     "X": "https://twitter.com/Matten_Zero",
     'GMail': "matt.ogbuehi@gmail.com"
 }
-
 
 
 # --- Layout of the Page
