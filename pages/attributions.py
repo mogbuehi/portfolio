@@ -4,9 +4,8 @@ from PIL import Image
 import base64
 
 
-css_file = "../styles/main.css"
-with open(css_file) as f:
-    st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
+
+
 
 # --- PATH Settings ---
 project_root = Path(__file__).parent.parent
@@ -22,6 +21,9 @@ github_icon = project_root/ "assets"/ "github.png"
 hf_icon = project_root/ "assets"/ "hf.png"
 gmail_icon = project_root/ "assets"/ "gmail.png"
 x_icon = project_root/ "assets"/ "x.png"
+
+with open(css_file) as f:
+    st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
 
 # Function to convert file to Base64 
 def get_image_as_base64(path):
