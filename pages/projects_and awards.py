@@ -1,5 +1,8 @@
 import streamlit as st
 
+with open(css_file) as f:
+    st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
+
 projects = {
     "Mistral AI API Chatbot": "https://github.com/mogbuehi/Mistral_AI_Chatbot",
     
