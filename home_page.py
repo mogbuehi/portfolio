@@ -117,7 +117,8 @@ st.markdown('<div class="sticky-header">Matthew Ogbuehi | AI Engineer </div>', u
 with open (resume_file, "rb") as pdf_file:
     PDFbyte = pdf_file.read()
 
-    profile_pic = Image.open(profile_pic)
+profile_pic = Image.open(profile_pic)
+
 with st.sidebar:
     st.download_button(
         label=""" 🗎 Download Resume""",
@@ -182,6 +183,7 @@ for index, (site_name, link) in enumerate(clients.items()):
 
 cols = st.columns(len(client_logos))
 for index, (name, logo) in enumerate(client_logos.items()):
+    logo = Image.open(logo)
     cols[index].image(logo)
 
 
