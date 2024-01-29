@@ -11,7 +11,16 @@ from assistant import ai_assistant
 st.header("Chat with Tachikoma")
 st.markdown("""Chat with my virtual assistant, Tachikoma. Her personality is based on the AI from the anime Ghost in the Shell. 
 She is has knowledge of my work experience and can answer questions about my resume with you""")
-st.image("https://static.wikia.nocookie.net/ghostintheshell/images/d/de/GITS_SAC_2045-Tachikoma_render.jpg/revision/latest?cb=20200425154547&path-prefix=en")
+
+# YouTube video ID
+video_id = "jRJiY8UjpOU"
+
+# Embed YouTube video using Markdown and HTML with loop
+st.markdown(f"""
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/{video_id}?playlist={video_id}&loop=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    """, unsafe_allow_html=True)
+
+
 # Load API key from environment variable
 # Check if the API key is not already in the session state
 if 'api_key' not in st.session_state:
