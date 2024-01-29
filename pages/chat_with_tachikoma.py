@@ -10,7 +10,7 @@ from assistant import ai_assistant
 
 st.header("Chat with Tachikoma")
 st.markdown("""Chat with my virtual assistant, Tachikoma. Her personality is based on the AI from the anime Ghost in the Shell. 
-She is has knowledge of my work experience and can answer questions about my resume with you""")
+She is has knowledge of my work experience and can answer questions about my resume with you. Enter your queries below!""")
 
 # YouTube video ID
 video_id = "jRJiY8UjpOU"
@@ -18,7 +18,7 @@ video_id = "jRJiY8UjpOU"
 # Embed YouTube video using Markdown and HTML with loop
 st.markdown(f"""
     <div style="text-align:center;">
-        <iframe width="280" height="118" src="https://www.youtube.com/embed/{video_id}?playlist={video_id}&loop=1&autoplay=1&mute=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="margin: auto; display: block;"></iframe>
+        <iframe width="700" height="393" src="https://www.youtube.com/embed/{video_id}?playlist={video_id}&loop=1&autoplay=1&mute=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="margin: auto; display: block;"></iframe>
     </div>
     """, unsafe_allow_html=True)
 
