@@ -12,7 +12,6 @@ st.header("Chat")
 # Load API key from environment variable
 # Check if the API key is not already in the session state
 if 'api_key' not in st.session_state:
-    load_dotenv()
     # Load the API key from the environment variables
     st.session_state['api_key'] = os.getenv('OPENAI_API_KEY')
 
