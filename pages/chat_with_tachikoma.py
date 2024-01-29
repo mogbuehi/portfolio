@@ -55,7 +55,7 @@ for message in st.session_state.messages:
 
 
 # Chat input
-user_input = st.chat_input('type here')
+user_input = st.chat_input('Type your query here and hit enter')
 
 # Handle the chat interaction
 if user_input:  # Check if there is an input to send
