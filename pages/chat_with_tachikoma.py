@@ -8,7 +8,10 @@ import os
 from openai import OpenAI
 from assistant import ai_assistant
 
-st.header("Chat")
+st.header("Chat with Tachikoma")
+st.markdown("""Chat with my virtual assistant, Tachikoma. Her personality is based on the AI from the anime Ghost in the Shell. 
+She is has knowledge of my work experience and can answer questions about my resume with you""")
+st.image("https://static.wikia.nocookie.net/ghostintheshell/images/d/de/GITS_SAC_2045-Tachikoma_render.jpg/revision/latest?cb=20200425154547&path-prefix=en")
 # Load API key from environment variable
 # Check if the API key is not already in the session state
 if 'api_key' not in st.session_state:
