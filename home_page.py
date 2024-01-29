@@ -169,6 +169,9 @@ st.write ("""
     - OpenAI : ChatGPT, GPT Vision, Whisper, TTS, custom GPTs, Assistants
     - LastMile AI Workbooks and AI Config
     - Mistral AI
+- UI/UX:
+    - StreamLit and Gradio
+    - HTML/CSS
 """)
 
 # --- Work History and Previous Clients ---
