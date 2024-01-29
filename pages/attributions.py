@@ -3,6 +3,11 @@ import streamlit as st
 from PIL import Image
 import base64
 
+
+css_file = "../styles/main.css"
+with open(css_file) as f:
+    st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
+
 # --- PATH Settings ---
 project_root = Path(__file__).parent.parent
 
