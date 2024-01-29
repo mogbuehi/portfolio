@@ -11,7 +11,7 @@ import base64
 project_root = Path(__file__).parent.parent
 
 # Now you can access the 'assets' directory from the root
-css_file = project_root / "assets" / "styles" / "main.css"
+css_file = project_root / "styles" / "main.css"
 resume_file = project_root / "assets" / "Tech Resume 24-01-24.pdf"
 
 youtube_icon = project_root/ "assets"/ "yt.png"
@@ -24,7 +24,7 @@ x_icon = project_root/ "assets"/ "x.png"
 
 with open(css_file) as f:
     st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
-
+    
 # Function to convert file to Base64 
 def get_image_as_base64(path):
     with open(path, "rb") as image_file:
