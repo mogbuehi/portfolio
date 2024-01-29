@@ -17,7 +17,9 @@ video_id = "jRJiY8UjpOU"
 
 # Embed YouTube video using Markdown and HTML with loop
 st.markdown(f"""
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/{video_id}?playlist={video_id}&loop=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <div style="text-align:center;">
+        <iframe width="280" height="118" src="https://www.youtube.com/embed/{video_id}?playlist={video_id}&loop=1&autoplay=1&mute=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="margin: auto; display: block;"></iframe>
+    </div>
     """, unsafe_allow_html=True)
 
 
