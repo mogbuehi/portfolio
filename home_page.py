@@ -191,14 +191,15 @@ for index, (name, logo) in enumerate(client_logos.items()):
 st.write('#')
 st.write("---")
 st.subheader("Custom GPTs on OpenAI's GPT Store")
-for gpt, links in gpts.items():
-    if type(links) == dict:
-        st.write(f"{gpt}")
-        for key, value in links.items():
-            st.write(f"- [{key}]({value})")
+# for gpt, links in gpts.items():
+#     if type(links) == dict:
+#         st.write(f"{gpt}")
+#         for key, value in links.items():
+#             st.write(f"- [{key}]({value})")
             
-    else: 
-        st.write(f"[{gpt}]({link})\n\n")
+#     else: 
+#         st.write(f"[{gpt}]({link})\n\n")
+st.markdown('[Check out my GPT Store Profile](https://gptstore.ai/creators/user-kbLCpL5MixFGIAR3uMccRkYJ)')
 
 ## --- Contact Form ---
 st.write("---")
