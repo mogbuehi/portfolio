@@ -23,6 +23,8 @@ github_icon = current_dir/ "assets"/ "github.png"
 hf_icon = current_dir/ "assets"/ "hf.png"
 gmail_icon = current_dir/ "assets"/ "gmail.png"
 x_icon = current_dir/ "assets"/ "x.png"
+zengx = current_dir/ "assets"/ "ZenGX.png"
+statascratch = current_dir/ "assets"/ "statascratch.png"
 
 # --- Load Assets ---
 
@@ -65,7 +67,12 @@ social_media_urls = {
     'GMail': "matt.ogbuehi@gmail.com"
 }
 
-
+# Client logos
+client_logos = {
+    'zengx' : zengx,
+    'statascratch' : statascratch
+    
+}
 
 
 gpts = {
@@ -173,6 +180,10 @@ cols = st.columns(len(clients))
 for index, (site_name, link) in enumerate(clients.items()):
     cols[index].write(f"[{site_name}]({link})") # markdown format
 
+cols = st.columns(len(client_logos))
+for index, (name, logo) in enumerate(client_logos.items()):
+    cols[index].image(logo)
+
 
 
 # --- GPTs ---
@@ -188,41 +199,11 @@ for gpt, links in gpts.items():
     else: 
         st.write(f"[{gpt}]({link})\n\n")
 
-    # --- Resources ---
-    st.write('#')
-    st.write("---")
-    st.subheader("Projects and Accomplishments")
-
-
-    # --- Attribution for Assets ---
-    st.write('#')
-
-    # List of tuples with the name of the icon, the corresponding URL for attribution, and the creator's name
-    attributions = [
-        ("LinkedIn", "https://www.flaticon.com/free-icons/linkedin", "Linkedin icons created by riajulislam - Flaticon"),
-        ("YouTube", "https://www.flaticon.com/free-icons/youtube", "Youtube icons created by Freepik - Flaticon"),
-        ("Facial Expression", "https://www.flaticon.com/free-icons/facial-expression", "Facial expression icons created by Pixel perfect - Flaticon"),
-        ("GitHub", "https://www.flaticon.com/free-icons/github", "Github icons created by Pixel perfect - Flaticon"),
-        ("GMail", "https://www.flaticon.com/free-icons/email", "Email icons created by Freepik - Flaticon"),
-        ("X", "https://www.flaticon.com/free-icons/brands-and-logotypes", "Brands and logotypes icons created by Freepik - Flaticon")
-        # Add more tuples for other icons and their attributions here
-    ]
-
-    # Display each attribution under a subheader
-    st.subheader("Icon Attributions")
-
-    # Looping through each attribution and creating a markdown link for it
-    for name, url, description in attributions:
-        attribution_html = f'<a href="{url}" title="{name} icons" target="_blank">{description}</a><br>'
-        st.markdown(attribution_html, unsafe_allow_html=True)
-
-
-    ## --- Contact Form ---
-    with st.container():
-        st.write("---")
-        st.header("Contact")
-        st.markdown(""" **Email me for a consultation or inquiry via email or on my social links  located at the bottom of the page**""")
-        st.write("##")
+## --- Contact Form ---
+st.write("---")
+st.header("Contact")
+st.markdown(""" **Email me for a consultation or inquiry via email or on my social links  located at the bottom of the page**""")
+st.write("##")
 
 ### Add custom CSS for the sticky footer
 st.markdown("""
