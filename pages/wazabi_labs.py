@@ -6,7 +6,6 @@ import base64
 
 
 
-
 # --- PATH Settings ---
 project_root = Path(__file__).parent.parent
 
@@ -21,6 +20,10 @@ github_icon = project_root/ "assets"/ "github.png"
 hf_icon = project_root/ "assets"/ "hf.png"
 gmail_icon = project_root/ "assets"/ "gmail.png"
 x_icon = project_root/ "assets"/ "x.png"
+
+with open(css_file) as f:
+    st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
+
 
 with open(css_file) as f:
     st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
@@ -80,7 +83,7 @@ st.markdown("""
 # Display the sticky header
 st.markdown('<div class="sticky-header">Matthew Ogbuehi | AI Engineer </div>', unsafe_allow_html=True)
 
-## --- Sidebar
+
 ## --- Sidebar
 with st.sidebar:
     # Page Navigation
@@ -89,10 +92,12 @@ with st.sidebar:
     st.page_link(page= 'pages/wazabi_labs.py', label='Startup')
     st.page_link(page= 'pages/projects_and awards.py', label='Projects')
     st.page_link(page= 'pages/attributions.py', label='Attributions')
+    
+
     # Download Resume
     with open (resume_file, "rb") as pdf_file:
         PDFbyte = pdf_file.read()
-
+        
     st.download_button(
         label=""" 🗎 Download Resume""",
         data=PDFbyte,
@@ -100,27 +105,23 @@ with st.sidebar:
         mime="application/octet-stream"
     )
 
+st.title("Startup Page")
+# Load Logo Image
+banner = project_root/ "assets"/ "Logo.png"
+banner = Image.open(banner)
 
-
-
-# List of tuples with the name of the icon, the corresponding URL for attribution, and the creator's name
-attributions = [
-    ("LinkedIn", "https://www.flaticon.com/free-icons/linkedin", "Linkedin icons created by riajulislam - Flaticon"),
-    ("YouTube", "https://www.flaticon.com/free-icons/youtube", "Youtube icons created by Freepik - Flaticon"),
-    ("Facial Expression", "https://www.flaticon.com/free-icons/facial-expression", "Facial expression icons created by Pixel perfect - Flaticon"),
-    ("GitHub", "https://www.flaticon.com/free-icons/github", "Github icons created by Pixel perfect - Flaticon"),
-    ("GMail", "https://www.flaticon.com/free-icons/email", "Email icons created by Freepik - Flaticon"),
-    ("X", "https://www.flaticon.com/free-icons/brands-and-logotypes", "Brands and logotypes icons created by Freepik - Flaticon")
-    # Add more tuples for other icons and their attributions here
-]
-
-# Display each attribution under a subheader
-st.subheader("Icon Attributions")
-
-# Looping through each attribution and creating a markdown link for it
-for name, url, description in attributions:
-    attribution_html = f'<a href="{url}" title="{name} icons" target="_blank">{description}</a><br>'
-    st.markdown(attribution_html, unsafe_allow_html=True)
+st.image(banner)
+st.markdown("""
+    <style>
+    .font {
+        font-size:24px;
+    }
+    </style>
+    <div class="font">
+        Welcome to my startup! I currenly am taking clients for development of AI tools and consulting while building a consumer-facing app.
+            Feel free to reach out to me at one of my links below (LinkedIn or on X are the best way)
+    </div>
+    """, unsafe_allow_html=True)
 
 
 

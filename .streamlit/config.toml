@@ -12,3 +12,9 @@ secondaryBackgroundColor = "#5FF4B4B"
 
 # Color used for almost all text.
 textColor = "#fff"
+
+[client]
+# Controls whether the default sidebar page navigation in a multipage app is
+# displayed.
+# Default: true
+showSidebarNavigation = false

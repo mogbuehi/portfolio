@@ -13,7 +13,7 @@ from assistant import ai_assistant
 # --- PATH Settings ---
 current_dir = Path (__file__).parent if "__file__" in locals() else Path.cwd()
 css_file = current_dir / "styles"/ "main.css"
-resume_file = current_dir / "assets"/ "Tech Resume 24-01-24.pdf"
+resume_file = current_dir / "assets"/ "Resume.pdf"
 profile_pic = current_dir / "assets"/ "profile_pic.jpg"
 
 youtube_icon = current_dir/ "assets"/ "yt.png"
@@ -63,7 +63,7 @@ social_media_urls = {
     'GitHub': "https://github.com/mogbuehi",
     'HuggingFace': "https://huggingface.co/mogbuehi",
     'Instagram': "https://www.instagram.com",
-    "X": "https://twitter.com/Matten_Zero",
+    "X": "https://twitter.com/MattenZero",
     'GMail': "mailto:matt.ogbuehi@gmail.com"
 }
 
@@ -113,16 +113,24 @@ st.markdown('<div class="sticky-header">Matthew Ogbuehi | AI Engineer </div>', u
 
 
 ## --- Sidebar
-with open (resume_file, "rb") as pdf_file:
-    PDFbyte = pdf_file.read()
-
-profile_pic = Image.open(profile_pic)
-
 with st.sidebar:
+    # Page Navigation
+    st.page_link(page='home_page.py', label='Home')
+    st.page_link(page='pages/chat_with_tachikoma.py', label='Chat with my Assistant!')
+    st.page_link(page= 'pages/wazabi_labs.py', label='Startup')
+    st.page_link(page='pages/projects_and awards.py', label='Projects')
+    st.page_link(page='pages/attributions.py', label='Attributions')
+    
+
+    # Download Resume
+    with open (resume_file, "rb") as pdf_file:
+        PDFbyte = pdf_file.read()
+
+    profile_pic = Image.open(profile_pic)
     st.download_button(
         label=""" 🗎 Download Resume""",
         data=PDFbyte,
-        file_name=resume_file.name,
+        file_name='Resume_Matt_Ogbuehi.pdf',
         mime="application/octet-stream"
     )
 
@@ -157,6 +165,7 @@ approach to AI engineering, ready to deliver innovative solutions.
 """
 )
 st.image(profile_pic)
+
 ## --- Skills ---
 st.write('##')
 st.subheader("Skills")
@@ -164,14 +173,19 @@ st.write("---")
 st.write (""" 
 - Python frameworks
     - Data (Pandas, Numpy, Matplotlib)
-    - LLM SDKs (Mistral AI, OpenAI)
+    - Flask
+          
 - AI Engineering 
     - OpenAI : ChatGPT, GPT Vision, Whisper, TTS, custom GPTs, Assistants
     - LastMile AI Workbooks and AI Config
     - Mistral AI
+    - DeepGram Transcription AI
+    - 
 - UI/UX:
-    - StreamLit and Gradio
+    - StreamLit
+    - Gradio SDKs
     - HTML/CSS
+    - Flutter SDK
 """)
 
 # --- Work History and Previous Clients ---
