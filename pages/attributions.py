@@ -84,7 +84,7 @@ st.markdown('<div class="sticky-header">Matthew Ogbuehi | AI Engineer </div>', u
 ## --- Sidebar
 with st.sidebar:
     # Page Navigation
-    st.page_link(page=f'{project_root}/home_page.py', label='Home')
+    st.page_link(page=f'./home_page.py', label='Home')
     st.page_link(page= 'pages/chat_with_tachikoma.py', label='Chat with my Assistant!')
     st.page_link(page= 'pages/wazabi_labs.py', label='Startup')
     st.page_link(page= 'pages/projects_and awards.py', label='Projects')
