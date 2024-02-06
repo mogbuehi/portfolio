@@ -52,7 +52,7 @@ social_media_urls = {
     'GitHub': "https://github.com/mogbuehi",
     'HuggingFace': "https://huggingface.co/mogbuehi",
     'Instagram': "https://www.instagram.com",
-    "X": "https://twitter.com/Matten_Zero",
+    "X": "https://twitter.com/MattenZero",
     'GMail': "matt.ogbuehi@gmail.com"
 }
 
