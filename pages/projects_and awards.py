@@ -134,7 +134,7 @@ projects = {
         "Winning Announcement": "https://www.linkedin.com/feed/update/urn:li:activity:7116172175723696128/"
     },
 
-    "AI YouTube Language Tutor (StreamLit AI Hackathon, 2023)": "https://huggingface.co/spaces/mogbuehi/YT_Language_Tutor",
+    "AI YouTube Language Tutor (StreamLit AI Hackathon, 2023)": "https://huggingface.co/spaces/mogbuehi/YT_Language_Tutor_2",
     
     "AI Tutor for Data Science (Freelance Project for Statascratch)": {"Demo": "https://huggingface.co/spaces/mogbuehi/LO_AI_Tutor", 
                                                                        "Video Presentation" : "https://drive.google.com/file/d/1UHJvTDQ2SdpPJGkpwzs0AGnMplx_mdiP/view?usp=drive_link", 
