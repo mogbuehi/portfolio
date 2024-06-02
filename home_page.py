@@ -137,8 +137,8 @@ with st.sidebar:
         file_name='Resume_Matt_Ogbuehi.pdf',
         mime="application/octet-stream"
     )
-
-     st.download_button(
+    
+    st.download_button(
         label=""" 🗎 Download Biotech Resume""",
         data=PDFbyte,
         file_name='Resume_Matt_Ogbuehi.pdf',
