@@ -14,7 +14,7 @@ from assistant import ai_assistant
 current_dir = Path (__file__).parent if "__file__" in locals() else Path.cwd()
 css_file = current_dir / "styles"/ "main.css"
 resume_file = current_dir / "assets"/ "Resume.pdf"
-biotech_resume = current_dir / "assets"/ "Biotech Resume.pdf"
+biotech_resume_file = current_dir / "assets"/ "Biotech Resume.pdf"
 profile_pic = current_dir / "assets"/ "profile_pic.jpg"
 
 youtube_icon = current_dir/ "assets"/ "yt.png"
