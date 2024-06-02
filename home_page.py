@@ -156,12 +156,10 @@ st.write("---")
 st.subheader("About Me")
 st.write(
     """
-As a freelance AI Engineer with a year's experience, I specialize in
-developing advanced tools using multiple AI models including OpenAI's GPT 
-and Whisper models. My background includes a 6-year tenure in bioprocess engineering, 
-and I've recently completed multiple successful AI projects to my clients.
-Combining these experiences, I bring a unique, multidisciplinary
-approach to AI engineering, ready to deliver innovative solutions.
+As a trained biopharma cell culture expert turned freelance AI engineer, I specialize in developing advanced tools utilizing various AI models, 
+including OpenAI's GPT and Whisper models. My background features six years of experience in bioprocess engineering, and I have recently completed 
+multiple successful AI projects for my clients. This blend of expertise allows me to offer a unique, multidisciplinary approach to AI engineering, 
+enabling me to deliver innovative solutions to a wide variety of clients.
 """
 )
 st.image(profile_pic)
