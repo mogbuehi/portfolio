@@ -1,5 +1,5 @@
 
-openai==1.4.0
+openai
 requests==2.31.0
 python-dotenv
 streamlit==1.31.0
